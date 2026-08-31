@@ -223,7 +223,7 @@
     }
 
     #mobile-menu.open {
-      max-height: 420px;
+      max-height: 600px;
     }
 
     ::selection {
@@ -265,14 +265,15 @@
     </div>
 
     <div id="mobile-menu" class="md:hidden">
-      <div class="flex flex-col gap-1 pb-5 font-mono text-xs uppercase tracking-wider text-muted">
+      <div class="flex flex-col gap-1 pb-6 pt-2 font-mono text-xs uppercase tracking-wider text-muted">
         <a href="#about" class="py-2.5 border-b border-token">About</a>
         <a href="#teaching" class="py-2.5 border-b border-token">Teaching</a>
         <a href="#subjects" class="py-2.5 border-b border-token">Subjects</a>
         <a href="#experience" class="py-2.5 border-b border-token">Experience</a>
         <a href="#certifications" class="py-2.5 border-b border-token">Certifications</a>
-        <a href="#contact" class="py-2.5">Contact</a>
-        <div class="flex items-center gap-1 pt-3">
+        <a href="#contact" class="py-2.5 border-b border-token">Contact</a>
+        <div class="flex items-center gap-2 pt-4">
+          <span class="text-[10px] text-muted uppercase">Theme:</span>
           <button class="theme-btn border border-token" data-theme-btn="light" aria-label="Light theme"><i data-lucide="sun" class="w-4 h-4"></i></button>
           <button class="theme-btn border border-token" data-theme-btn="dark" aria-label="Dark theme"><i data-lucide="moon" class="w-4 h-4"></i></button>
           <button class="theme-btn border border-token" data-theme-btn="tech" aria-label="Tech accent theme"><i data-lucide="sparkles" class="w-4 h-4"></i></button>
@@ -301,10 +302,10 @@
 
         <div class="flex flex-wrap gap-3 mb-9">
           <span class="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm">
-            <i data-lucide="school" class="w-4 h-4 text-accent2"></i> Physical classes only — Attock, Pakistan
+            <i data-lucide="school" class="w-4 h-4 text-accent2 shrink-0"></i> Physical classes only — Attock, Pakistan
           </span>
           <span class="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm">
-            <i data-lucide="home" class="w-4 h-4 text-accent2"></i> Students visit my home — no travel to students
+            <i data-lucide="home" class="w-4 h-4 text-accent2 shrink-0"></i> Students visit my home — no travel to students
           </span>
         </div>
 
@@ -333,12 +334,12 @@
           <circle cx="160" cy="20" r="3.5" fill="var(--accent)"/>
         </svg>
 
-        <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 shadow-token" style="border-color:var(--bg-alt); box-shadow:0 0 0 1px var(--border), var(--shadow);">
+        <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 shadow-token shrink-0" style="border-color:var(--bg-alt); box-shadow:0 0 0 1px var(--border), var(--shadow);">
           <img src="myphoto.jpeg" alt="Portrait of Faiza Kanwal, Mathematics teacher" class="w-full h-full object-cover" />
         </div>
 
-        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 card rounded-xl px-4 py-3 flex items-center gap-3">
-          <i data-lucide="graduation-cap" class="w-5 h-5 text-accent"></i>
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 card rounded-xl px-4 py-3 flex items-center gap-3 shrink-0">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-accent shrink-0"></i>
           <div class="leading-tight">
             <p class="font-mono text-[11px] text-muted">B.Ed. (Secondary)</p>
             <p class="font-semibold text-sm">3.93 CGPA</p>
@@ -670,29 +671,21 @@
     <div class="grid lg:grid-cols-[0.8fr,1.2fr] gap-10">
       <div class="reveal space-y-5">
         <div class="card rounded-2xl p-6 flex items-start gap-4">
-          <i data-lucide="mail" class="w-5 h-5 text-accent mt-0.5"></i>
+          <i data-lucide="mail" class="w-5 h-5 text-accent mt-0.5 shrink-0"></i>
           <div>
             <p class="text-xs text-muted mb-1">Email</p>
             <a href="mailto:faizakanwal945@gmail.com" class="font-medium hover:text-[var(--accent)] break-all">faizakanwal945@gmail.com</a>
           </div>
         </div>
         <div class="card rounded-2xl p-6 flex items-start gap-4">
-          <i data-lucide="phone" class="w-5 h-5 text-accent mt-0.5"></i>
-          <div>
-            <p class="text-xs text-muted mb-1">Phone / WhatsApp</p>
-            <p class="font-medium">0311-7571539</p>
-            <p class="font-medium">0329-5863683</p>
-          </div>
-        </div>
-        <div class="card rounded-2xl p-6 flex items-start gap-4">
-          <i data-lucide="map-pin" class="w-5 h-5 text-accent mt-0.5"></i>
+          <i data-lucide="map-pin" class="w-5 h-5 text-accent mt-0.5 shrink-0"></i>
           <div>
             <p class="text-xs text-muted mb-1">Location</p>
             <p class="font-medium">Attock, Punjab, Pakistan</p>
           </div>
         </div>
         <a href="https://www.linkedin.com/in/faiza-kanwal-0a1980418" target="_blank" rel="noopener noreferrer" class="btn-outline card rounded-2xl p-6 flex items-center gap-4">
-          <i data-lucide="linkedin" class="w-5 h-5 text-accent"></i>
+          <i data-lucide="linkedin" class="w-5 h-5 text-accent shrink-0"></i>
           <div>
             <p class="text-xs text-muted mb-1">LinkedIn</p>
             <p class="font-medium">/in/faiza-kanwal-0a1980418</p>
