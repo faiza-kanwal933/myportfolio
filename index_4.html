@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faiza Kanwal — Mathematics Educator</title>
+<meta name="description" content="Faiza Kanwal — International Online Mathematics Tutor & Subject Specialist, Grades 1–10. Online worldwide, in-person in Attock, Pakistan." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root, [data-theme="light"]{
+    --bg:#F5F6F0;
+    --bg-alt:#FFFFFF;
+    --bg-raised:#FBFBF7;
+    --grid-line: rgba(28,43,51,0.07);
+    --text:#1C2B33;
+    --text-muted:#5B6B70;
+    --accent:#BE7F22;
+    --accent-ink:#FFFFFF;
+    --accent-2:#2E7D6B;
+    --border: rgba(28,43,51,0.13);
+    --shadow: 0 1px 2px rgba(28,43,51,0.06), 0 10px 30px rgba(28,43,51,0.06);
+    --overlay: rgba(255,255,255,0.72);
+  }
+  [data-theme="dark"]{
+    --bg:#131F19;
+    --bg-alt:#1A2921;
+    --bg-raised:#1F3126;
+    --grid-line: rgba(242,240,230,0.07);
+    --text:#F2F0E6;
+    --text-muted:#AAB8AC;
+    --accent:#E8A33D;
+    --accent-ink:#16241D;
+    --accent-2:#5FB6A5;
+    --border: rgba(242,240,230,0.13);
+    --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 14px 34px rgba(0,0,0,0.38);
+    --overlay: rgba(19,31,25,0.72);
+  }
+  [data-theme="tech"]{
+    --bg:#0E1420;
+    --bg-alt:#151E30;
+    --bg-raised:#1A2438;
+    --grid-line: rgba(150,170,255,0.09);
+    --text:#EAEDF5;
+    --text-muted:#93A0BC;
+    --accent:#43C8BC;
+    --accent-ink:#0B1620;
+    --accent-2:#8B7CF6;
+    --border: rgba(150,170,255,0.16);
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 14px 34px rgba(0,0,0,0.45);
+    --overlay: rgba(14,20,32,0.72);
+  }
+
+  *{ scroll-behavior: smooth; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    transition: background .35s ease, color .35s ease;
+  }
+  .font-display{ font-family:'Fraunces', serif; }
+  .font-mono{ font-family:'JetBrains Mono', ui-monospace, monospace; }
+
+  .bg-surface{ background: var(--bg-alt); }
+  .bg-raised{ background: var(--bg-raised); }
+  .text-muted{ color: var(--text-muted); }
+  .border-token{ border-color: var(--border); }
+  .shadow-token{ box-shadow: var(--shadow); }
+  .text-accent{ color: var(--accent); }
+  .text-accent2{ color: var(--accent-2); }
+  .bg-accent{ background: var(--accent); color: var(--accent-ink); }
+  .ring-accent{ box-shadow: 0 0 0 1px var(--accent) inset; }
+
+  .grid-paper{
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
+  .card{
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .card:hover{
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+
+  .btn-primary{
+    background: var(--accent);
+    color: var(--accent-ink);
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  }
+  .btn-primary:hover{ transform: translateY(-2px); filter: brightness(1.06); box-shadow: var(--shadow); }
+
+  .btn-outline{
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: border-color .2s ease, transform .2s ease, background .2s ease;
+  }
+  .btn-outline:hover{ border-color: var(--accent); transform: translateY(-2px); background: var(--bg-raised); }
+
+  .pill{
+    border: 1px solid var(--border);
+    background: var(--bg-alt);
+  }
+
+  .theme-btn{
+    width: 32px; height: 32px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius: 9999px;
+    color: var(--text-muted);
+    transition: all .2s ease;
+  }
+  .theme-btn[data-active="true"]{
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  nav.scrolled{
+    background: var(--overlay);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .timeline-rail{
+    position: relative;
+  }
+  .timeline-rail::before{
+    content:"";
+    position:absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--border);
+  }
+  .timeline-dot{
+    position:absolute;
+    left: 0px;
+    top: 6px;
+    width: 11px; height: 11px;
+    border-radius: 9999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+
+  .reveal{
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    .reveal{ opacity: 1; transform: none; }
+  }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .glyph{
+    font-family:'Fraunces', serif;
+    position:absolute;
+    color: var(--accent);
+    opacity: .12;
+    font-style: italic;
+    pointer-events:none;
+    user-select:none;
+  }
+
+  #mobile-menu{ max-height:0; overflow:hidden; transition: max-height .35s ease; }
+  #mobile-menu.open{ max-height: 420px; }
+
+  ::selection{ background: var(--accent); color: var(--accent-ink); }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- ================= NAV ================= -->
+<header id="site-nav" class="fixed top-0 left-0 right-0 z-50 transition-colors">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#top" class="flex items-center gap-2.5 group">
+        <span class="w-9 h-9 rounded-full border border-token flex items-center justify-center font-mono text-xs font-semibold group-hover:border-[var(--accent)] transition-colors">FK</span>
+        <span class="font-display text-lg tracking-tight hidden sm:block">Faiza Kanwal</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 font-mono text-[12px] uppercase tracking-wider text-muted">
+        <a href="#about" class="hover:text-[var(--accent)] transition-colors">About</a>
+        <a href="#teaching" class="hover:text-[var(--accent)] transition-colors">Teaching</a>
+        <a href="#subjects" class="hover:text-[var(--accent)] transition-colors">Subjects</a>
+        <a href="#experience" class="hover:text-[var(--accent)] transition-colors">Experience</a>
+        <a href="#certifications" class="hover:text-[var(--accent)] transition-colors">Certifications</a>
+        <a href="#contact" class="hover:text-[var(--accent)] transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center gap-1 p-1 rounded-full pill">
+          <button class="theme-btn" data-theme-btn="light" aria-label="Light theme"><i data-lucide="sun" class="w-4 h-4"></i></button>
+          <button class="theme-btn" data-theme-btn="dark" aria-label="Dark theme"><i data-lucide="moon" class="w-4 h-4"></i></button>
+          <button class="theme-btn" data-theme-btn="tech" aria-label="Tech accent theme"><i data-lucide="sparkles" class="w-4 h-4"></i></button>
+        </div>
+        <button id="menu-toggle" class="md:hidden theme-btn border border-token" aria-label="Toggle menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden">
+      <div class="flex flex-col gap-1 pb-5 font-mono text-xs uppercase tracking-wider text-muted">
+        <a href="#about" class="py-2.5 border-b border-token">About</a>
+        <a href="#teaching" class="py-2.5 border-b border-token">Teaching</a>
+        <a href="#subjects" class="py-2.5 border-b border-token">Subjects</a>
+        <a href="#experience" class="py-2.5 border-b border-token">Experience</a>
+        <a href="#certifications" class="py-2.5 border-b border-token">Certifications</a>
+        <a href="#contact" class="py-2.5">Contact</a>
+        <div class="flex items-center gap-1 pt-3">
+          <button class="theme-btn border border-token" data-theme-btn="light" aria-label="Light theme"><i data-lucide="sun" class="w-4 h-4"></i></button>
+          <button class="theme-btn border border-token" data-theme-btn="dark" aria-label="Dark theme"><i data-lucide="moon" class="w-4 h-4"></i></button>
+          <button class="theme-btn border border-token" data-theme-btn="tech" aria-label="Tech accent theme"><i data-lucide="sparkles" class="w-4 h-4"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden grid-paper">
+  <span class="glyph text-8xl -left-4 top-24 select-none" aria-hidden="true">&#8721;</span>
+  <span class="glyph text-7xl right-4 top-16 select-none" aria-hidden="true">&#960;</span>
+  <span class="glyph text-6xl right-24 bottom-4 select-none hidden sm:block" aria-hidden="true">&#8730;</span>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
+    <div class="grid lg:grid-cols-[1.15fr,0.85fr] gap-14 items-center">
+
+      <div class="reveal">
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-5">Mathematics Educator · MPhil Candidate</p>
+        <h1 class="font-display text-5xl sm:text-6xl leading-[1.05] tracking-tight mb-5">
+          Faiza <span class="italic text-accent">Kanwal</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-muted max-w-lg mb-7 leading-relaxed">
+          International Online Mathematics Tutor &amp; Subject Specialist, teaching Grades 1–10 — from arithmetic foundations through introductory calculus.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-9">
+          <span class="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm">
+            <i data-lucide="globe" class="w-4 h-4 text-accent2"></i> Online — available worldwide
+          </span>
+          <span class="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm">
+            <i data-lucide="school" class="w-4 h-4 text-accent2"></i> In-person — Attock, Pakistan
+          </span>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="assets/Faiza-Kanwal-Resume.pdf" download class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
+            <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+          </a>
+          <a href="mailto:zulqarsufyan5@gmail.com?subject=Tutoring%20Inquiry" class="btn-outline inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
+            <i data-lucide="mail" class="w-4 h-4"></i> Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/faiza-kanwal-0a1980418" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
+            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal relative flex justify-center lg:justify-end">
+        <svg viewBox="0 0 320 320" class="absolute w-[340px] h-[340px] -z-10 opacity-70" aria-hidden="true">
+          <circle cx="160" cy="160" r="150" fill="none" stroke="var(--border)" stroke-width="1"/>
+          <line x1="160" y1="20" x2="160" y2="300" stroke="var(--border)" stroke-width="1"/>
+          <line x1="20" y1="160" x2="300" y2="160" stroke="var(--border)" stroke-width="1"/>
+          <path d="M 40 260 Q 160 20 280 260" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+          <path d="M 200 160 A 40 40 0 0 1 172 197" fill="none" stroke="var(--accent-2)" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="40" cy="260" r="3.5" fill="var(--accent)"/>
+          <circle cx="280" cy="260" r="3.5" fill="var(--accent)"/>
+          <circle cx="160" cy="20" r="3.5" fill="var(--accent)"/>
+        </svg>
+
+        <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 shadow-token" style="border-color:var(--bg-alt); box-shadow:0 0 0 1px var(--border), var(--shadow);">
+          <img src="assets/faiza-kanwal.jpg" alt="Portrait of Faiza Kanwal, Mathematics teacher" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 card rounded-xl px-4 py-3 flex items-center gap-3">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-accent"></i>
+          <div class="leading-tight">
+            <p class="font-mono text-[11px] text-muted">B.Ed. (Secondary)</p>
+            <p class="font-semibold text-sm">3.93 CGPA</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEACHING MODES ================= -->
+<section id="teaching" class="py-20 sm:py-24 border-t border-token">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal mb-12 max-w-xl">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">Teaching &amp; Educational Services</p>
+      <h2 class="font-display text-3xl sm:text-4xl">Two ways to learn, one standard of teaching</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="reveal card rounded-2xl p-8">
+        <div class="w-11 h-11 rounded-full bg-accent flex items-center justify-center mb-6">
+          <i data-lucide="globe" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-display text-2xl mb-2">Online Classes</h3>
+        <p class="text-muted mb-6">Remote, one-on-one or small-group mathematics tuition, open to students in any country and time zone.</p>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Flexible scheduling across time zones</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Interactive digital whiteboard sessions</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Course material customised to the student's syllabus</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Regular progress reviews and practice worksheets</li>
+        </ul>
+      </div>
+
+      <div class="reveal card rounded-2xl p-8">
+        <div class="w-11 h-11 rounded-full bg-accent flex items-center justify-center mb-6">
+          <i data-lucide="school" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-display text-2xl mb-2">Physical / Local Classes</h3>
+        <p class="text-muted mb-6">In-person tuition and classes for students based in Attock, Pakistan — individual or small-group sessions.</p>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Face-to-face instruction in Attock and nearby areas</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Home tuition or in-person sessions by arrangement</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Printed worksheets and hands-on problem solving</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Direct coordination with parents on progress</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUBJECTS ================= -->
+<section id="subjects" class="py-20 sm:py-24 border-t border-token bg-raised">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal mb-12 max-w-xl">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">Subjects &amp; Levels</p>
+      <h2 class="font-display text-3xl sm:text-4xl">What I teach, Grades 1–10</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="reveal card rounded-2xl p-6 relative overflow-hidden">
+        <span class="glyph text-6xl -right-2 -bottom-4" aria-hidden="true">+</span>
+        <p class="font-mono text-[11px] text-muted mb-3">GRADES 1–5</p>
+        <h3 class="font-display text-xl mb-2">Arithmetic &amp; Foundations</h3>
+        <p class="text-sm text-muted">Number sense, operations, fractions and early problem-solving — building a confident base.</p>
+      </div>
+
+      <div class="reveal card rounded-2xl p-6 relative overflow-hidden">
+        <span class="glyph text-6xl -right-2 -bottom-4" aria-hidden="true">x</span>
+        <p class="font-mono text-[11px] text-muted mb-3">GRADES 6–10</p>
+        <h3 class="font-display text-xl mb-2">Algebra</h3>
+        <p class="text-sm text-muted">Equations, expressions and functions, taught with worked examples and guided practice.</p>
+      </div>
+
+      <div class="reveal card rounded-2xl p-6 relative overflow-hidden">
+        <span class="glyph text-6xl -right-2 -bottom-4" aria-hidden="true">&#9651;</span>
+        <p class="font-mono text-[11px] text-muted mb-3">GRADES 8–10</p>
+        <h3 class="font-display text-xl mb-2">Geometry &amp; Trigonometry</h3>
+        <p class="text-sm text-muted">Shapes, proofs, angles and ratios — with diagrams that make abstract ideas visual.</p>
+      </div>
+
+      <div class="reveal card rounded-2xl p-6 relative overflow-hidden">
+        <span class="glyph text-6xl -right-2 -bottom-4" aria-hidden="true">&#956;</span>
+        <p class="font-mono text-[11px] text-muted mb-3">GRADES 9–10</p>
+        <h3 class="font-display text-xl mb-2">Statistics &amp; Data Handling</h3>
+        <p class="text-sm text-muted">Averages, probability and graphical data — practical maths for everyday reasoning.</p>
+      </div>
+
+      <div class="reveal card rounded-2xl p-6 relative overflow-hidden">
+        <span class="glyph text-6xl -right-2 -bottom-4" aria-hidden="true">&#8747;</span>
+        <p class="font-mono text-[11px] text-muted mb-3">INTRO LEVEL</p>
+        <h3 class="font-display text-xl mb-2">Basic Calculus</h3>
+        <p class="text-sm text-muted">A gentle introduction to limits, derivatives and rates of change for advanced Grade 10 students.</p>
+      </div>
+
+      <div class="reveal card rounded-2xl p-6 relative overflow-hidden">
+        <span class="glyph text-6xl -right-2 -bottom-4" aria-hidden="true">&#10003;</span>
+        <p class="font-mono text-[11px] text-muted mb-3">ALL LEVELS</p>
+        <h3 class="font-display text-xl mb-2">Exam Prep &amp; Assessment</h3>
+        <p class="text-sm text-muted">Structured revision, mock assessments and board-exam style practice papers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-20 sm:py-24 border-t border-token">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-[0.9fr,1.1fr] gap-14 items-start">
+      <div class="reveal">
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">About Me</p>
+        <h2 class="font-display text-3xl sm:text-4xl mb-6">Mathematics, taught with patience and structure</h2>
+        <p class="font-display italic text-xl leading-relaxed text-muted">
+          "My goal is simple — build a classroom, in person or online, where every student feels supported and capable of growth."
+        </p>
+      </div>
+
+      <div class="reveal space-y-5 text-muted leading-relaxed">
+        <p>
+          Faiza Kanwal is a Mathematics educator currently completing an MPhil in Mathematics at the University of Education, Attock, on top of a B.Ed. (Secondary) and a BS in Mathematics. Her teaching experience includes an internship at FG Public School, Sanjwal Cantt, where she supported lesson planning, classroom activities, and assessment for students with varied learning needs.
+        </p>
+        <p>
+          She pairs a strong academic record with modern digital tools — LaTeX and Overleaf for clean technical documentation, Excel and Google Workspace for organisation, and AI-assisted tools for lesson preparation — to keep her teaching structured, current, and easy to follow.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+          <div class="card rounded-xl p-4 text-center">
+            <p class="font-mono text-2xl text-accent">3.93</p>
+            <p class="text-xs text-muted mt-1">B.Ed. CGPA</p>
+          </div>
+          <div class="card rounded-xl p-4 text-center">
+            <p class="font-mono text-2xl text-accent">3.55</p>
+            <p class="text-xs text-muted mt-1">BS Maths CGPA</p>
+          </div>
+          <div class="card rounded-xl p-4 text-center">
+            <p class="font-mono text-2xl text-accent">1–10</p>
+            <p class="text-xs text-muted mt-1">Grades Taught</p>
+          </div>
+          <div class="card rounded-xl p-4 text-center">
+            <p class="font-mono text-2xl text-accent">MPhil</p>
+            <p class="text-xs text-muted mt-1">Mathematics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="py-20 sm:py-24 border-t border-token bg-raised">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal mb-12 max-w-xl">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">Skills &amp; Tools</p>
+      <h2 class="font-display text-3xl sm:text-4xl">What I bring to the classroom</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="notebook-pen" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">Lesson Planning</h3>
+        <p class="text-sm text-muted">Structured, syllabus-aligned lesson plans for every grade level.</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="users" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">Classroom Management</h3>
+        <p class="text-sm text-muted">Calm, organised sessions that keep students engaged and on track.</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="clipboard-check" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">Student Assessment</h3>
+        <p class="text-sm text-muted">Regular quizzes and reviews to track real progress, not guesswork.</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="file-text" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">LaTeX &amp; Overleaf</h3>
+        <p class="text-sm text-muted">Clean, professional worksheets and technical documents.</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="sheet" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">Excel &amp; Google Workspace</h3>
+        <p class="text-sm text-muted">Organised records, tracking sheets, and shared classroom material.</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="sparkles" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">AI-Assisted Teaching</h3>
+        <p class="text-sm text-muted">Uses modern AI tools to prepare material faster, without cutting corners.</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="monitor" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">MS Office</h3>
+        <p class="text-sm text-muted">Comfortable across Word, PowerPoint and Excel for reports and slides.</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="layout-grid" class="w-6 h-6 text-accent2 mb-4"></i>
+        <h3 class="font-semibold mb-1.5">Curriculum Design</h3>
+        <p class="text-sm text-muted">Builds topic sequences that connect one concept clearly to the next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE & EDUCATION ================= -->
+<section id="experience" class="py-20 sm:py-24 border-t border-token">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal mb-14 max-w-xl">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">Experience &amp; Education</p>
+      <h2 class="font-display text-3xl sm:text-4xl">A timeline of study and teaching</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-14">
+      <div class="reveal">
+        <h3 class="font-mono text-xs uppercase tracking-wider text-muted mb-6">Teaching Experience</h3>
+        <div class="timeline-rail pl-7 space-y-8">
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <p class="font-mono text-xs text-accent mb-1">Internship · 1.5 Months</p>
+            <h4 class="font-display text-lg mb-1">Mathematics Teaching Intern</h4>
+            <p class="text-sm text-muted mb-2">FG Public School, Sanjwal Cantt</p>
+            <p class="text-sm text-muted leading-relaxed">Supported lesson planning and classroom activities, helped check student work and assessments, and worked alongside senior teachers to support students with different learning needs.</p>
+          </div>
+        </div>
+
+        <h3 class="font-mono text-xs uppercase tracking-wider text-muted mt-12 mb-6">Achievements &amp; Conferences</h3>
+        <div class="timeline-rail pl-7 space-y-8">
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <h4 class="font-semibold mb-1">PM Laptop Scheme</h4>
+            <p class="text-sm text-muted">Awarded based on academic excellence.</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <h4 class="font-semibold mb-1">CORM 2025</h4>
+            <p class="text-sm text-muted">Conference on Recent Advances in Mathematics.</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <h4 class="font-semibold mb-1">Freelancing Seminar</h4>
+            <p class="text-sm text-muted">Zilla Council Hall, Attock — Dec 2022.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h3 class="font-mono text-xs uppercase tracking-wider text-muted mb-6">Education</h3>
+        <div class="timeline-rail pl-7 space-y-8">
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <p class="font-mono text-xs text-accent mb-1">2023 – 2025 · Result Awaited</p>
+            <h4 class="font-display text-lg mb-1">MPhil Mathematics</h4>
+            <p class="text-sm text-muted">University of Education, Attock</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <p class="font-mono text-xs text-accent mb-1">2023 – 2025 · 3.93 CGPA</p>
+            <h4 class="font-display text-lg mb-1">B.Ed. (Secondary)</h4>
+            <p class="text-sm text-muted">Virtual University of Pakistan</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <p class="font-mono text-xs text-accent mb-1">2019 – 2023 · 3.55 CGPA</p>
+            <h4 class="font-display text-lg mb-1">BS Mathematics</h4>
+            <p class="text-sm text-muted">University of Education, Attock</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <p class="font-mono text-xs text-accent mb-1">2017 – 2019 · 857/1100</p>
+            <h4 class="font-display text-lg mb-1">F.Sc. Pre-Engineering</h4>
+            <p class="text-sm text-muted">Federal College of Science &amp; Commerce, Attock Cantt</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <p class="font-mono text-xs text-accent mb-1">2015 – 2017 · 888/1050</p>
+            <h4 class="font-display text-lg mb-1">Matric (Science)</h4>
+            <p class="text-sm text-muted">FG Public School, Sanjwal Cantt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications" class="py-20 sm:py-24 border-t border-token bg-raised">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal mb-12 max-w-xl">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">Certifications</p>
+      <h2 class="font-display text-3xl sm:text-4xl">Ongoing professional development</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="badge-check" class="w-5 h-5 text-accent mb-4"></i>
+        <h3 class="font-semibold text-sm mb-1">Maximize Productivity with AI Tools</h3>
+        <p class="text-xs text-muted">Google · Dec 2025</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="badge-check" class="w-5 h-5 text-accent mb-4"></i>
+        <h3 class="font-semibold text-sm mb-1">Introduction to AI</h3>
+        <p class="text-xs text-muted">Coursera · Aug 2025</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="badge-check" class="w-5 h-5 text-accent mb-4"></i>
+        <h3 class="font-semibold text-sm mb-1">AI for Everyone</h3>
+        <p class="text-xs text-muted">DeepLearning.AI · Jul 2025</p>
+      </div>
+      <div class="reveal card rounded-2xl p-6">
+        <i data-lucide="badge-check" class="w-5 h-5 text-accent mb-4"></i>
+        <h3 class="font-semibold text-sm mb-1">Write Smarter with Overleaf &amp; LaTeX</h3>
+        <p class="text-xs text-muted">Fred Hutch Cancer Center · Jul 2025</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-20 sm:py-24 border-t border-token">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal mb-12 max-w-xl">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">Contact &amp; Connect</p>
+      <h2 class="font-display text-3xl sm:text-4xl">Let's talk about lessons</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-[0.8fr,1.2fr] gap-10">
+      <div class="reveal space-y-5">
+        <div class="card rounded-2xl p-6 flex items-start gap-4">
+          <i data-lucide="mail" class="w-5 h-5 text-accent mt-0.5"></i>
+          <div>
+            <p class="text-xs text-muted mb-1">Email</p>
+            <a href="mailto:zulqarsufyan5@gmail.com" class="font-medium hover:text-[var(--accent)] break-all">zulqarsufyan5@gmail.com</a>
+          </div>
+        </div>
+        <div class="card rounded-2xl p-6 flex items-start gap-4">
+          <i data-lucide="phone" class="w-5 h-5 text-accent mt-0.5"></i>
+          <div>
+            <p class="text-xs text-muted mb-1">Phone / WhatsApp</p>
+            <p class="font-medium">0311-7571539</p>
+            <p class="font-medium">0329-5863683</p>
+          </div>
+        </div>
+        <div class="card rounded-2xl p-6 flex items-start gap-4">
+          <i data-lucide="map-pin" class="w-5 h-5 text-accent mt-0.5"></i>
+          <div>
+            <p class="text-xs text-muted mb-1">Location</p>
+            <p class="font-medium">Attock, Punjab, Pakistan</p>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/faiza-kanwal-0a1980418" target="_blank" rel="noopener noreferrer" class="btn-outline card rounded-2xl p-6 flex items-center gap-4">
+          <i data-lucide="linkedin" class="w-5 h-5 text-accent"></i>
+          <div>
+            <p class="text-xs text-muted mb-1">LinkedIn</p>
+            <p class="font-medium">/in/faiza-kanwal-0a1980418</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="reveal card rounded-2xl p-8">
+        <form id="contact-form" class="space-y-5">
+          <div>
+            <label for="name" class="text-xs font-mono uppercase tracking-wider text-muted block mb-2">Name</label>
+            <input id="name" name="name" type="text" required class="w-full rounded-lg px-4 py-3 bg-transparent border border-token text-sm" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="email" class="text-xs font-mono uppercase tracking-wider text-muted block mb-2">Email</label>
+            <input id="email" name="email" type="email" required class="w-full rounded-lg px-4 py-3 bg-transparent border border-token text-sm" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label for="message" class="text-xs font-mono uppercase tracking-wider text-muted block mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full rounded-lg px-4 py-3 bg-transparent border border-token text-sm" placeholder="Tell me about the grade level and subject you need help with..."></textarea>
+          </div>
+          <!--
+            No backend is attached — this form builds a mailto: link from the fields above.
+            To wire this to a real backend or form service (Formspree, EmailJS, etc.),
+            replace the submit handler in the script below with your endpoint call.
+          -->
+          <button type="submit" class="btn-primary w-full rounded-lg py-3 font-medium text-sm inline-flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i> Send Message
+          </button>
+          <p id="form-note" class="text-xs text-muted text-center"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-10 border-t border-token">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="font-display text-sm">Faiza Kanwal — Teach · Explain · Inspire</p>
+    <p class="text-xs text-muted font-mono">&copy; <span id="year"></span> Faiza Kanwal. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  // ---- Theme handling ----
+  const root = document.documentElement;
+  const themeBtns = document.querySelectorAll('[data-theme-btn]');
+  function setTheme(theme){
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('fk-theme', theme);
+    themeBtns.forEach(b => b.setAttribute('data-active', b.dataset.themeBtn === theme));
+  }
+  themeBtns.forEach(btn => btn.addEventListener('click', () => setTheme(btn.dataset.themeBtn)));
+  setTheme(localStorage.getItem('fk-theme') || 'light');
+
+  // ---- Sticky nav background on scroll ----
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive: true });
+
+  // ---- Mobile menu ----
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // ---- Scroll reveal ----
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // ---- Contact form -> mailto fallback ----
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const subject = encodeURIComponent('Tutoring Inquiry from ' + name);
+    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = `mailto:zulqarsufyan5@gmail.com?subject=${subject}&body=${body}`;
+    document.getElementById('form-note').textContent = 'Opening your email app...';
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
