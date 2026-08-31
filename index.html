@@ -1,199 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Faiza Kanwal — Mathematics Educator</title>
-<meta name="description" content="Faiza Kanwal — International Online Mathematics Tutor & Subject Specialist, Grades 1–10. Online worldwide, in-person in Attock, Pakistan." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faiza Kanwal — Mathematics Educator</title>
+  <meta name="description" content="Faiza Kanwal — Mathematics Tutor & Subject Specialist, Grades 1–10. In-person classes held in Attock, Pakistan." />
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-  :root, [data-theme="light"]{
-    --bg:#F5F6F0;
-    --bg-alt:#FFFFFF;
-    --bg-raised:#FBFBF7;
-    --grid-line: rgba(28,43,51,0.07);
-    --text:#1C2B33;
-    --text-muted:#5B6B70;
-    --accent:#BE7F22;
-    --accent-ink:#FFFFFF;
-    --accent-2:#2E7D6B;
-    --border: rgba(28,43,51,0.13);
-    --shadow: 0 1px 2px rgba(28,43,51,0.06), 0 10px 30px rgba(28,43,51,0.06);
-    --overlay: rgba(255,255,255,0.72);
-  }
-  [data-theme="dark"]{
-    --bg:#131F19;
-    --bg-alt:#1A2921;
-    --bg-raised:#1F3126;
-    --grid-line: rgba(242,240,230,0.07);
-    --text:#F2F0E6;
-    --text-muted:#AAB8AC;
-    --accent:#E8A33D;
-    --accent-ink:#16241D;
-    --accent-2:#5FB6A5;
-    --border: rgba(242,240,230,0.13);
-    --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 14px 34px rgba(0,0,0,0.38);
-    --overlay: rgba(19,31,25,0.72);
-  }
-  [data-theme="tech"]{
-    --bg:#0E1420;
-    --bg-alt:#151E30;
-    --bg-raised:#1A2438;
-    --grid-line: rgba(150,170,255,0.09);
-    --text:#EAEDF5;
-    --text-muted:#93A0BC;
-    --accent:#43C8BC;
-    --accent-ink:#0B1620;
-    --accent-2:#8B7CF6;
-    --border: rgba(150,170,255,0.16);
-    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 14px 34px rgba(0,0,0,0.45);
-    --overlay: rgba(14,20,32,0.72);
-  }
-
-  *{ scroll-behavior: smooth; }
-  body{
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-    transition: background .35s ease, color .35s ease;
-  }
-  .font-display{ font-family:'Fraunces', serif; }
-  .font-mono{ font-family:'JetBrains Mono', ui-monospace, monospace; }
-
-  .bg-surface{ background: var(--bg-alt); }
-  .bg-raised{ background: var(--bg-raised); }
-  .text-muted{ color: var(--text-muted); }
-  .border-token{ border-color: var(--border); }
-  .shadow-token{ box-shadow: var(--shadow); }
-  .text-accent{ color: var(--accent); }
-  .text-accent2{ color: var(--accent-2); }
-  .bg-accent{ background: var(--accent); color: var(--accent-ink); }
-  .ring-accent{ box-shadow: 0 0 0 1px var(--accent) inset; }
-
-  .grid-paper{
-    background-image:
-      linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 34px 34px;
-  }
-
-  .card{
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  .card:hover{
-    transform: translateY(-4px);
-    border-color: var(--accent);
-  }
-
-  .btn-primary{
-    background: var(--accent);
-    color: var(--accent-ink);
-    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-  }
-  .btn-primary:hover{ transform: translateY(-2px); filter: brightness(1.06); box-shadow: var(--shadow); }
-
-  .btn-outline{
-    border: 1px solid var(--border);
-    color: var(--text);
-    transition: border-color .2s ease, transform .2s ease, background .2s ease;
-  }
-  .btn-outline:hover{ border-color: var(--accent); transform: translateY(-2px); background: var(--bg-raised); }
-
-  .pill{
-    border: 1px solid var(--border);
-    background: var(--bg-alt);
-  }
-
-  .theme-btn{
-    width: 32px; height: 32px;
-    display:flex; align-items:center; justify-content:center;
-    border-radius: 9999px;
-    color: var(--text-muted);
-    transition: all .2s ease;
-  }
-  .theme-btn[data-active="true"]{
-    background: var(--accent);
-    color: var(--accent-ink);
-  }
-
-  nav.scrolled{
-    background: var(--overlay);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .timeline-rail{
-    position: relative;
-  }
-  .timeline-rail::before{
-    content:"";
-    position:absolute;
-    left: 5px;
-    top: 6px;
-    bottom: 6px;
-    width: 1px;
-    background: var(--border);
-  }
-  .timeline-dot{
-    position:absolute;
-    left: 0px;
-    top: 6px;
-    width: 11px; height: 11px;
-    border-radius: 9999px;
-    background: var(--accent);
-    box-shadow: 0 0 0 4px var(--bg);
-  }
-
-  .reveal{
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity .7s ease, transform .7s ease;
-  }
-  .reveal.in{
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ scroll-behavior: auto !important; transition: none !important; animation: none !important; }
-    .reveal{ opacity: 1; transform: none; }
-  }
-
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-  }
-
-  .glyph{
-    font-family:'Fraunces', serif;
-    position:absolute;
-    color: var(--accent);
-    opacity: .12;
-    font-style: italic;
-    pointer-events:none;
-    user-select:none;
-  }
-
-  #mobile-menu{ max-height:0; overflow:hidden; transition: max-height .35s ease; }
-  #mobile-menu.open{ max-height: 420px; }
-
-  ::selection{ background: var(--accent); color: var(--accent-ink); }
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="antialiased">
 
-<!-- ================= NAV ================= -->
 <header id="site-nav" class="fixed top-0 left-0 right-0 z-50 transition-colors">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="flex items-center justify-between h-16">
@@ -241,7 +65,6 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <section id="top" class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden grid-paper">
   <span class="glyph text-8xl -left-4 top-24 select-none" aria-hidden="true">&#8721;</span>
   <span class="glyph text-7xl right-4 top-16 select-none" aria-hidden="true">&#960;</span>
@@ -251,28 +74,28 @@
     <div class="grid lg:grid-cols-[1.15fr,0.85fr] gap-14 items-center">
 
       <div class="reveal">
-        <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-5">Mathematics Educator · MPhil Candidate</p>
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-5">Mathematics Educator · MS Mathematics</p>
         <h1 class="font-display text-5xl sm:text-6xl leading-[1.05] tracking-tight mb-5">
           Faiza <span class="italic text-accent">Kanwal</span>
         </h1>
         <p class="text-lg sm:text-xl text-muted max-w-lg mb-7 leading-relaxed">
-          International Online Mathematics Tutor &amp; Subject Specialist, teaching Grades 1–10 — from arithmetic foundations through introductory calculus.
+          Mathematics Tutor &amp; Subject Specialist, teaching Grades 1–10 — from arithmetic foundations through introductory calculus.
         </p>
 
         <div class="flex flex-wrap gap-3 mb-9">
           <span class="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm">
-            <i data-lucide="globe" class="w-4 h-4 text-accent2"></i> Online — available worldwide
+            <i data-lucide="school" class="w-4 h-4 text-accent2"></i> Physical classes only — Attock, Pakistan
           </span>
           <span class="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm">
-            <i data-lucide="school" class="w-4 h-4 text-accent2"></i> In-person — Attock, Pakistan
+            <i data-lucide="home" class="w-4 h-4 text-accent2"></i> Students visit my home — no travel to students
           </span>
         </div>
 
         <div class="flex flex-wrap gap-3">
-          <a href="assets/Faiza-Kanwal-Resume.pdf" download class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
+          <a href="resume.pdf" download class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
             <i data-lucide="download" class="w-4 h-4"></i> Download Resume
           </a>
-          <a href="mailto:zulqarsufyan5@gmail.com?subject=Tutoring%20Inquiry" class="btn-outline inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
+          <a href="mailto:faizakanwal945@gmail.com?subject=Tutoring%20Inquiry" class="btn-outline inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
             <i data-lucide="mail" class="w-4 h-4"></i> Email Me
           </a>
           <a href="https://www.linkedin.com/in/faiza-kanwal-0a1980418" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium text-sm">
@@ -294,7 +117,7 @@
         </svg>
 
         <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 shadow-token" style="border-color:var(--bg-alt); box-shadow:0 0 0 1px var(--border), var(--shadow);">
-          <img src="assets/faiza-kanwal.jpg" alt="Portrait of Faiza Kanwal, Mathematics teacher" class="w-full h-full object-cover" />
+          <img src="myphoto.png" alt="Portrait of Faiza Kanwal, Mathematics teacher" class="w-full h-full object-cover" />
         </div>
 
         <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 card rounded-xl px-4 py-3 flex items-center gap-3">
@@ -310,47 +133,45 @@
   </div>
 </section>
 
-<!-- ================= TEACHING MODES ================= -->
 <section id="teaching" class="py-20 sm:py-24 border-t border-token">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="reveal mb-12 max-w-xl">
       <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">Teaching &amp; Educational Services</p>
-      <h2 class="font-display text-3xl sm:text-4xl">Two ways to learn, one standard of teaching</h2>
+      <h2 class="font-display text-3xl sm:text-4xl">In-person classes, held at my home in Attock</h2>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
       <div class="reveal card rounded-2xl p-8">
         <div class="w-11 h-11 rounded-full bg-accent flex items-center justify-center mb-6">
-          <i data-lucide="globe" class="w-5 h-5"></i>
+          <i data-lucide="school" class="w-5 h-5"></i>
         </div>
-        <h3 class="font-display text-2xl mb-2">Online Classes</h3>
-        <p class="text-muted mb-6">Remote, one-on-one or small-group mathematics tuition, open to students in any country and time zone.</p>
+        <h3 class="font-display text-2xl mb-2">Physical / Local Classes</h3>
+        <p class="text-muted mb-6">In-person mathematics tuition for students based in Attock, Pakistan — individual or small-group sessions.</p>
         <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Flexible scheduling across time zones</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Interactive digital whiteboard sessions</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Course material customised to the student's syllabus</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Regular progress reviews and practice worksheets</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Face-to-face instruction, Attock and nearby areas</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Individual and small-group sessions</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Printed worksheets and hands-on problem solving</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Direct coordination with parents on progress</li>
         </ul>
       </div>
 
       <div class="reveal card rounded-2xl p-8">
         <div class="w-11 h-11 rounded-full bg-accent flex items-center justify-center mb-6">
-          <i data-lucide="school" class="w-5 h-5"></i>
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
         </div>
-        <h3 class="font-display text-2xl mb-2">Physical / Local Classes</h3>
-        <p class="text-muted mb-6">In-person tuition and classes for students based in Attock, Pakistan — individual or small-group sessions.</p>
+        <h3 class="font-display text-2xl mb-2">Location &amp; Logistics</h3>
+        <p class="text-muted mb-6">Clear expectations upfront, so scheduling is simple for students and parents.</p>
         <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Face-to-face instruction in Attock and nearby areas</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Home tuition or in-person sessions by arrangement</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Printed worksheets and hands-on problem solving</li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Direct coordination with parents on progress</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="home" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Classes are held at my home in Attock, Pakistan</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="user-check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Students come to me for every session</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="x-circle" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Home tuition is not offered — I do not travel to students</li>
+          <li class="flex items-start gap-2.5"><i data-lucide="calendar-check" class="w-4 h-4 mt-0.5 text-accent2 shrink-0"></i> Please plan pickup/drop-off accordingly</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= SUBJECTS ================= -->
 <section id="subjects" class="py-20 sm:py-24 border-t border-token bg-raised">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="reveal mb-12 max-w-xl">
@@ -404,7 +225,6 @@
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
 <section id="about" class="py-20 sm:py-24 border-t border-token">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="grid lg:grid-cols-[0.9fr,1.1fr] gap-14 items-start">
@@ -412,13 +232,13 @@
         <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">About Me</p>
         <h2 class="font-display text-3xl sm:text-4xl mb-6">Mathematics, taught with patience and structure</h2>
         <p class="font-display italic text-xl leading-relaxed text-muted">
-          "My goal is simple — build a classroom, in person or online, where every student feels supported and capable of growth."
+          "My goal is simple — build a classroom where every student feels supported and capable of growth."
         </p>
       </div>
 
       <div class="reveal space-y-5 text-muted leading-relaxed">
         <p>
-          Faiza Kanwal is a Mathematics educator currently completing an MPhil in Mathematics at the University of Education, Attock, on top of a B.Ed. (Secondary) and a BS in Mathematics. Her teaching experience includes an internship at FG Public School, Sanjwal Cantt, where she supported lesson planning, classroom activities, and assessment for students with varied learning needs.
+          Faiza Kanwal is a Mathematics educator holding an MS in Mathematics (Completed — Result Awaited) from the University of Education, Lahore — Attock Campus, along with a B.Ed. (Secondary) and a BS in Mathematics. She is currently teaching Classes 9 and 10 at STEM School and College, Attock Cantt, and previously taught as a Junior Teacher at Army Public School, Attock Cantt, building on classroom experience first gained during an internship at FG Public School, Sanjwal Cantt.
         </p>
         <p>
           She pairs a strong academic record with modern digital tools — LaTeX and Overleaf for clean technical documentation, Excel and Google Workspace for organisation, and AI-assisted tools for lesson preparation — to keep her teaching structured, current, and easy to follow.
@@ -438,7 +258,7 @@
             <p class="text-xs text-muted mt-1">Grades Taught</p>
           </div>
           <div class="card rounded-xl p-4 text-center">
-            <p class="font-mono text-2xl text-accent">MPhil</p>
+            <p class="font-mono text-2xl text-accent">MS</p>
             <p class="text-xs text-muted mt-1">Mathematics</p>
           </div>
         </div>
@@ -447,7 +267,6 @@
   </div>
 </section>
 
-<!-- ================= SKILLS ================= -->
 <section class="py-20 sm:py-24 border-t border-token bg-raised">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="reveal mb-12 max-w-xl">
@@ -500,7 +319,6 @@
   </div>
 </section>
 
-<!-- ================= EXPERIENCE & EDUCATION ================= -->
 <section id="experience" class="py-20 sm:py-24 border-t border-token">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="reveal mb-14 max-w-xl">
@@ -513,8 +331,21 @@
         <h3 class="font-mono text-xs uppercase tracking-wider text-muted mb-6">Teaching Experience</h3>
         <div class="timeline-rail pl-7 space-y-8">
           <div class="relative">
+            <span class="timeline-dot" style="background:var(--accent-2);"></span>
+            <span class="font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block mb-2" style="background:var(--accent-2); color:var(--bg-alt);">Current</span>
+            <h4 class="font-display text-lg mb-1">Teacher — Classes 9 &amp; 10</h4>
+            <p class="text-sm text-muted mb-2">STEM School and College, Attock Cantt</p>
+            <p class="text-sm text-muted leading-relaxed">Currently teaching Mathematics to Classes 9 and 10.</p>
+          </div>
+          <div class="relative">
             <span class="timeline-dot"></span>
-            <p class="font-mono text-xs text-accent mb-1">Internship · 1.5 Months</p>
+            <p class="font-mono text-xs text-accent mb-1">Previous · 12 January – 15 April · 3 Months</p>
+            <h4 class="font-display text-lg mb-1">Junior Teacher</h4>
+            <p class="text-sm text-muted mb-2">Army Public School, Attock Cantt</p>
+          </div>
+          <div class="relative">
+            <span class="timeline-dot"></span>
+            <p class="font-mono text-xs text-accent mb-1">Previous · Internship · 1.5 Months</p>
             <h4 class="font-display text-lg mb-1">Mathematics Teaching Intern</h4>
             <p class="text-sm text-muted mb-2">FG Public School, Sanjwal Cantt</p>
             <p class="text-sm text-muted leading-relaxed">Supported lesson planning and classroom activities, helped check student work and assessments, and worked alongside senior teachers to support students with different learning needs.</p>
@@ -546,9 +377,9 @@
         <div class="timeline-rail pl-7 space-y-8">
           <div class="relative">
             <span class="timeline-dot"></span>
-            <p class="font-mono text-xs text-accent mb-1">2023 – 2025 · Result Awaited</p>
-            <h4 class="font-display text-lg mb-1">MPhil Mathematics</h4>
-            <p class="text-sm text-muted">University of Education, Attock</p>
+            <p class="font-mono text-xs text-accent mb-1">2024 – 2026 · Completed — Result Awaited</p>
+            <h4 class="font-display text-lg mb-1">MS Mathematics</h4>
+            <p class="text-sm text-muted">University of Education, Lahore — Attock Campus</p>
           </div>
           <div class="relative">
             <span class="timeline-dot"></span>
@@ -580,7 +411,6 @@
   </div>
 </section>
 
-<!-- ================= CERTIFICATIONS ================= -->
 <section id="certifications" class="py-20 sm:py-24 border-t border-token bg-raised">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="reveal mb-12 max-w-xl">
@@ -613,7 +443,6 @@
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
 <section id="contact" class="py-20 sm:py-24 border-t border-token">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="reveal mb-12 max-w-xl">
@@ -627,7 +456,7 @@
           <i data-lucide="mail" class="w-5 h-5 text-accent mt-0.5"></i>
           <div>
             <p class="text-xs text-muted mb-1">Email</p>
-            <a href="mailto:zulqarsufyan5@gmail.com" class="font-medium hover:text-[var(--accent)] break-all">zulqarsufyan5@gmail.com</a>
+            <a href="mailto:faizakanwal945@gmail.com" class="font-medium hover:text-[var(--accent)] break-all">faizakanwal945@gmail.com</a>
           </div>
         </div>
         <div class="card rounded-2xl p-6 flex items-start gap-4">
@@ -668,11 +497,6 @@
             <label for="message" class="text-xs font-mono uppercase tracking-wider text-muted block mb-2">Message</label>
             <textarea id="message" name="message" rows="4" required class="w-full rounded-lg px-4 py-3 bg-transparent border border-token text-sm" placeholder="Tell me about the grade level and subject you need help with..."></textarea>
           </div>
-          <!--
-            No backend is attached — this form builds a mailto: link from the fields above.
-            To wire this to a real backend or form service (Formspree, EmailJS, etc.),
-            replace the submit handler in the script below with your endpoint call.
-          -->
           <button type="submit" class="btn-primary w-full rounded-lg py-3 font-medium text-sm inline-flex items-center justify-center gap-2">
             <i data-lucide="send" class="w-4 h-4"></i> Send Message
           </button>
@@ -683,7 +507,6 @@
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="py-10 border-t border-token">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
     <p class="font-display text-sm">Faiza Kanwal — Teach · Explain · Inspire</p>
@@ -691,58 +514,6 @@
   </div>
 </footer>
 
-<script>
-  lucide.createIcons();
-
-  // ---- Theme handling ----
-  const root = document.documentElement;
-  const themeBtns = document.querySelectorAll('[data-theme-btn]');
-  function setTheme(theme){
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('fk-theme', theme);
-    themeBtns.forEach(b => b.setAttribute('data-active', b.dataset.themeBtn === theme));
-  }
-  themeBtns.forEach(btn => btn.addEventListener('click', () => setTheme(btn.dataset.themeBtn)));
-  setTheme(localStorage.getItem('fk-theme') || 'light');
-
-  // ---- Sticky nav background on scroll ----
-  const nav = document.getElementById('site-nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 12);
-  }, { passive: true });
-
-  // ---- Mobile menu ----
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  menuToggle.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', open);
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  }));
-
-  // ---- Scroll reveal ----
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => io.observe(el));
-
-  // ---- Contact form -> mailto fallback ----
-  document.getElementById('contact-form').addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const subject = encodeURIComponent('Tutoring Inquiry from ' + name);
-    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = `mailto:zulqarsufyan5@gmail.com?subject=${subject}&body=${body}`;
-    document.getElementById('form-note').textContent = 'Opening your email app...';
-  });
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
